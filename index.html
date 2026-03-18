@@ -128,6 +128,69 @@
     }
     .hero-sub strong { color: var(--orange); font-weight: 600; }
 
+    /* ---- WALLET ---- */
+    .wallet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 20px;
+      animation: fadeUp 0.8s ease 0.1s both;
+    }
+    .wallet-addr {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 11px;
+      color: #6b6b6b;
+      background: rgba(247,147,26,0.05);
+      border: 1px solid rgba(247,147,26,0.1);
+      border-radius: 8px;
+      padding: 8px 14px;
+      max-width: 380px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .wallet-addr:hover {
+      color: var(--orange);
+      border-color: rgba(247,147,26,0.25);
+    }
+    .wallet-copy {
+      background: rgba(247,147,26,0.08);
+      border: 1px solid rgba(247,147,26,0.15);
+      border-radius: 8px;
+      padding: 8px 10px;
+      cursor: pointer;
+      color: var(--text-dim);
+      transition: all 0.25s ease;
+      display: flex;
+      align-items: center;
+    }
+    .wallet-copy:hover { color: var(--orange); border-color: rgba(247,147,26,0.3); }
+    .wallet-copy svg { width: 14px; height: 14px; }
+    .wallet-toast {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: rgba(247,147,26,0.9);
+      color: #07070a;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      font-weight: 600;
+      padding: 10px 20px;
+      border-radius: 8px;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s ease;
+      z-index: 100;
+    }
+    .wallet-toast.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+    }
+
     /* ---- SOCIAL LINKS ---- */
     .links {
       display: flex;
@@ -412,6 +475,7 @@
       .links { gap: 8px; }
       .link-btn { padding: 12px 18px; font-size: 13px; }
       .stat-value { font-size: 18px; }
+      .wallet-addr { max-width: 260px; font-size: 10px; }
     }
   </style>
 </head>
@@ -432,7 +496,15 @@
       <p class="hero-sub">
         <strong>4,169</strong> parcels · <strong>57</strong> tranches · Builder · Holder · Educator
       </p>
+      <div class="wallet">
+        <div class="wallet-addr" onclick="copyWallet()" title="Click to copy">bc1pyffkdr8pq0h6aw9uj3zxdlvfdar35mew0yyenpzm8xe24q0lvxyq07sa9e</div>
+        <button class="wallet-copy" onclick="copyWallet()" title="Copy address">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        </button>
+      </div>
     </section>
+
+    <div class="wallet-toast" id="wallet-toast">Address copied!</div>
 
     <!-- LINKS -->
     <nav class="links">
@@ -576,6 +648,14 @@
   </div>
 
 <script>
+// ---- WALLET COPY ----
+function copyWallet() {
+  navigator.clipboard.writeText('bc1pyffkdr8pq0h6aw9uj3zxdlvfdar35mew0yyenpzm8xe24q0lvxyq07sa9e');
+  const toast = document.getElementById('wallet-toast');
+  toast.classList.add('show');
+  setTimeout(() => toast.classList.remove('show'), 2000);
+}
+
 // ---- DATA ----
 const RAW = [
   {p:0.00013,q:60},{p:0.00001,q:93},{p:0.00014,q:79},{p:0.0001,q:60},{p:0.00015,q:100},
