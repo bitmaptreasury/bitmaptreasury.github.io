@@ -14,6 +14,8 @@ Bitcoin has produced over 940,000 blocks since genesis. That number grows by ~14
 
 - **Permanent by design.** Bitmap inscriptions live on Bitcoin forever. No server to shut down, no company to go bankrupt, no chain to halt. If Bitcoin runs, Bitmap runs.
 - **Historical block scarcity.** Early blocks carry provenance that cannot be replicated. Block 1,000 will always be block 1,000 — mined in January 2009, weeks after Satoshi launched the network.
+- **Social consensus.** Bitmap's value isn't enforced by a team or a token — it's established by collective agreement. The same social consensus that gives Bitcoin its value applies here: thousands of holders, builders, and creators independently recognising that Bitcoin blocks are digital territory. That consensus, once formed, is extraordinarily difficult to reverse.
+- **Unlimited use cases.** Because each parcel maps to a real Bitcoin block with real on-chain data (transactions, timestamps, miner info, fee markets), the design space is unbounded. Gaming worlds, data visualisations, decentralised property registries, AI agent infrastructure, block-based identity systems, historical archives, on-chain art — every new idea adds a layer of utility without requiring permission from anyone. Bitmap is a protocol, not a product. Anyone can build on it.
 - **AI infrastructure layer.** As autonomous agents proliferate, they need permanent, uncensorable addresses. Bitmap parcels are candidates for exactly that — persistent digital territory for AI agents operating on Bitcoin rails.
 - **Builder ecosystem.** The Bitmap Activity Standard (BAS), SDKs, on-chain games, and block explorers are being built today. The infrastructure is early, which means the upside is asymmetric.
 
