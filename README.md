@@ -2,59 +2,27 @@
 
 **[@bitmaptreasury](https://twitter.com/bitmaptreasury)** — 4,169 Bitcoin-native Bitmap parcels across 57 tranches.
 
-A visual portfolio and treasury dashboard for tracking Bitmap Ordinals holdings on Bitcoin.
+## Why Bitmap?
 
-## Deploy to GitHub Pages
+Bitmap is the only metaverse built directly on Bitcoin's base layer. Every Bitcoin block that has ever been mined — and every block that ever will be mined — is a Bitmap parcel. No sidechains, no bridges, no tokens. Just Bitcoin.
 
-### 1. Create the repo
+### The scarcity thesis
 
-Go to [github.com/new](https://github.com/new) and create a new repository:
+Bitcoin has produced over 940,000 blocks since genesis. That number grows by ~144 per day, but the earliest blocks — the ones mined when Bitcoin was unknown, unpriced, and ideological — will never be produced again. Sub-10k blocks are digital history. Sub-25k blocks are the Manhattan of a permanent, censorship-resistant metaverse. The supply is fixed. The narrative is compounding.
 
-- **Repository name:** `bitmaptreasury.github.io` (this gives you a clean URL)
-- Set to **Public**
-- Click **Create repository**
+### Why it matters
 
-### 2. Push the files
+- **Permanent by design.** Bitmap inscriptions live on Bitcoin forever. No server to shut down, no company to go bankrupt, no chain to halt. If Bitcoin runs, Bitmap runs.
+- **Historical block scarcity.** Early blocks carry provenance that cannot be replicated. Block 1,000 will always be block 1,000 — mined in January 2009, weeks after Satoshi launched the network.
+- **AI infrastructure layer.** As autonomous agents proliferate, they need permanent, uncensorable addresses. Bitmap parcels are candidates for exactly that — persistent digital territory for AI agents operating on Bitcoin rails.
+- **Builder ecosystem.** The Bitmap Activity Standard (BAS), SDKs, on-chain games, and block explorers are being built today. The infrastructure is early, which means the upside is asymmetric.
 
-```bash
-cd bitmaptreasury
-git init
-git add .
-git commit -m "Bitmap Treasury portfolio"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/bitmaptreasury.github.io.git
-git push -u origin main
-```
+### The position
 
-### 3. Enable GitHub Pages
+This treasury holds 4,169 parcels accumulated across 57 tranches at an average cost of ~15,931 sats per parcel. The strategy is simple: stack early blocks, build tooling, educate the ecosystem, and wait. Patience is the edge.
 
-1. Go to your repo → **Settings** → **Pages**
-2. Under **Source**, select **Deploy from a branch**
-3. Branch: `main`, folder: `/ (root)`
-4. Click **Save**
+---
 
-Your site will be live at: **https://YOUR_USERNAME.github.io** (or **https://bitmaptreasury.github.io** if that's your username)
+**Treasury wallet:** `bc1pyffkdr8pq0h6aw9uj3zxdlvfdar35mew0yyenpzm8xe24q0lvxyq07sa9e`
 
-### 4. Custom domain (optional)
-
-To use a domain like `bitmaptreasury.com`:
-
-1. In repo Settings → Pages → Custom domain, enter your domain
-2. Add these DNS records at your registrar:
-   - `A` records pointing to GitHub's IPs (185.199.108-111.153)
-   - `CNAME` record: `www` → `YOUR_USERNAME.github.io`
-3. Check "Enforce HTTPS"
-
-## Updating data
-
-Edit the `RAW` array in `index.html` to add new tranches. Each entry is `{p: PRICE_IN_BTC, q: QUANTITY}`.
-
-## Stack
-
-- Pure HTML/CSS/JS — zero build step
-- [Chart.js](https://www.chartjs.org/) via CDN for visualizations
-- Google Fonts (Instrument Serif, JetBrains Mono, Outfit)
-
-## License
-
-MIT
+**Explore:** [bitmaptreasury.github.io](https://bitmaptreasury.github.io)
