@@ -1,6 +1,6 @@
 # Bitmap Treasury
 
-**[@bitmaptreasury](https://twitter.com/bitmaptreasury)** — 4,169 Bitcoin-native Bitmap parcels across 57 tranches.
+**[@bitmaptreasury](https://twitter.com/bitmaptreasury)** — 4,204 Bitcoin-native Bitmap parcels across 57 tranches.
 
 ## Why Bitmap?
 
@@ -21,7 +21,7 @@ Bitcoin has produced over 940,000 blocks since genesis. That number grows by ~14
 
 ### The position
 
-This treasury holds 4,169 parcels accumulated across 57 tranches at an average cost of ~15,931 sats per parcel. The strategy is simple: stack early blocks, build tooling, educate the ecosystem, and wait. Patience is the edge.
+This treasury holds 4,204 parcels accumulated across 57 tranches at an average cost of ~15,873 sats per parcel. The strategy is simple: stack early blocks, build tooling, educate the ecosystem, and wait. Patience is the edge.
 
 ---
 

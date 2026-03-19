@@ -4,14 +4,14 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bitmap Treasury — @bitmaptreasury</title>
-  <meta name="description" content="Bitmap Treasury — 4,169 Bitcoin-native parcels. Builder, holder, educator in the Bitmap Ordinals ecosystem.">
+  <meta name="description" content="Bitmap Treasury — 4,204 Bitcoin-native parcels. Builder, holder, educator in the Bitmap Ordinals ecosystem.">
   <meta property="og:title" content="Bitmap Treasury">
-  <meta property="og:description" content="4,169 Bitcoin-native parcels across 57 tranches. Explore the treasury.">
+  <meta property="og:description" content="4,204 Bitcoin-native parcels across 57 tranches. Explore the treasury.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@bitmaptreasury">
   <meta name="twitter:title" content="Bitmap Treasury">
-  <meta name="twitter:description" content="4,169 Bitcoin-native parcels. Builder · Holder · Educator">
+  <meta name="twitter:description" content="4,204 Bitcoin-native parcels. Builder · Holder · Educator">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
@@ -202,7 +202,7 @@
     <section class="hero">
       <div class="hero-badge"><span class="dot"></span>Bitcoin Ordinals · Bitmap</div>
       <h1>Bitmap<br>Treasury</h1>
-      <p class="hero-sub"><strong>4,169</strong> parcels · <strong>57</strong> tranches · Builder · Holder · Educator</p>
+      <p class="hero-sub"><strong>4,204</strong> parcels · <strong>57</strong> tranches · Builder · Holder · Educator</p>
       <div class="wallet">
         <div class="wallet-addr" onclick="copyWallet()" title="Click to copy">bc1pyffkdr8pq0h6aw9uj3zxdlvfdar35mew0yyenpzm8xe24q0lvxyq07sa9e</div>
         <button class="wallet-copy" onclick="copyWallet()" title="Copy address">
@@ -229,11 +229,11 @@
     </nav>
 
     <div class="stats-grid">
-      <div class="stat-card"><div class="stat-label">Total Parcels</div><div class="stat-value">4,169</div><div class="stat-sub">57 tranches</div></div>
-      <div class="stat-card"><div class="stat-label">Total Invested</div><div class="stat-value orange">0.6642</div><div class="stat-sub">BTC</div></div>
-      <div class="stat-card"><div class="stat-label">Avg Cost</div><div class="stat-value">15,931</div><div class="stat-sub">sats / parcel</div></div>
+      <div class="stat-card"><div class="stat-label">Total Parcels</div><div class="stat-value">4,204</div><div class="stat-sub">57 tranches</div></div>
+      <div class="stat-card"><div class="stat-label">Total Invested</div><div class="stat-value orange">0.6673</div><div class="stat-sub">BTC</div></div>
+      <div class="stat-card"><div class="stat-label">Avg Cost</div><div class="stat-value">15,873</div><div class="stat-sub">sats / parcel</div></div>
       <div class="stat-card"><div class="stat-label">Floor Price</div><div class="stat-value">10,000</div><div class="stat-sub">sats / parcel</div></div>
-      <div class="stat-card"><div class="stat-label">P&amp;L</div><div class="stat-value red">-37.2%</div><div class="stat-sub">-0.2473 BTC</div></div>
+      <div class="stat-card"><div class="stat-label">P&amp;L</div><div class="stat-value red">-37.0%</div><div class="stat-sub">-0.2469 BTC</div></div>
     </div>
 
     <div class="tabs">
@@ -248,7 +248,7 @@
     <div id="tab-overview" class="tab-panel active">
       <div class="panel">
         <div class="panel-title">Position Breakdown vs Floor</div>
-        <div class="panel-sub">How 4,169 parcels compare to the 10,000 sat floor</div>
+        <div class="panel-sub">How 4,204 parcels compare to the 10,000 sat floor</div>
         <div class="position-row">
           <div class="position-card" style="border-color:var(--green)"><div class="label">Below Floor</div><div class="val" style="color:var(--green)" id="below-count">—</div><div class="desc" id="below-desc"></div></div>
           <div class="position-card" style="border-color:var(--orange)"><div class="label">At Floor</div><div class="val" style="color:var(--orange)" id="at-count">—</div><div class="desc" id="at-desc"></div></div>
@@ -278,7 +278,7 @@
     <div id="tab-analytics" class="tab-panel">
       <div class="panel">
         <div class="panel-title">Break-Even & Price Scenarios</div>
-        <div class="panel-sub">Portfolio value at different floor prices — break-even at ~15,931 sats</div>
+        <div class="panel-sub">Portfolio value at different floor prices — break-even at ~15,873 sats</div>
         <div class="scenario-grid" id="scenario-grid"></div>
         <div class="slider-wrap">
           <label>Custom Floor Price Explorer</label>
@@ -306,7 +306,7 @@
       <div class="panel">
         <div class="panel-title">Exit Strategy Simulator</div><div class="panel-sub">Model partial exits — sell X parcels at Y price and see the impact</div>
         <div class="sim-row">
-          <div class="sim-field"><label>Parcels to Sell</label><input type="number" id="sim-qty" value="500" min="1" max="4169"></div>
+          <div class="sim-field"><label>Parcels to Sell</label><input type="number" id="sim-qty" value="500" min="1" max="4204"></div>
           <div class="sim-field"><label>Sell Price (sats)</label><input type="number" id="sim-price" value="25000" min="1"></div>
           <button class="sim-btn" onclick="runSim()">Calculate</button>
         </div>
@@ -326,13 +326,13 @@
       <div class="table-wrap"><table class="data-table" id="tranches-table"><thead><tr><th>#</th><th>Price (BTC)</th><th>Price (sats)</th><th>Qty</th><th>Spent (BTC)</th><th>vs Floor</th></tr></thead><tbody></tbody></table></div>
     </div>
 
-    <footer class="footer"><span>BITMAP TREASURY — @bitmaptreasury</span><span>Floor: 10,000 sats · Avg: 15,931 sats · 4,169 parcels</span></footer>
+    <footer class="footer"><span>BITMAP TREASURY — @bitmaptreasury</span><span>Floor: 10,000 sats · Avg: 15,873 sats · 4,204 parcels</span></footer>
   </div>
 
 <script>
 function copyWallet(){navigator.clipboard.writeText('bc1pyffkdr8pq0h6aw9uj3zxdlvfdar35mew0yyenpzm8xe24q0lvxyq07sa9e');const t=document.getElementById('wallet-toast');t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2000)}
 
-const RAW=[{p:.00013,q:60},{p:.00001,q:93},{p:.00014,q:79},{p:.0001,q:60},{p:.00015,q:100},{p:.00012,q:88},{p:.000159,q:2},{p:.00016,q:73},{p:.000162,q:2},{p:.000165,q:39},{p:.000169,q:53},{p:.00017,q:116},{p:.000185,q:35},{p:.00019,q:88},{p:.0002,q:123},{p:.000219,q:60},{p:.00023,q:56},{p:.000235,q:35},{p:.00024,q:165},{p:.00025,q:91},{p:.00026,q:21},{p:.000269,q:7},{p:.00027,q:32},{p:.00028,q:92},{p:.00029,q:35},{p:.0003,q:126},{p:.00031,q:82},{p:.00032,q:67},{p:.00033,q:39},{p:.00034,q:42},{p:.00035,q:33},{p:.00036,q:41},{p:.00037,q:93},{p:.00038,q:24},{p:.00039,q:4},{p:.0004,q:35},{p:.00041,q:9},{p:.00042,q:11},{p:.00043,q:1},{p:.00044,q:6},{p:.00045,q:10},{p:.00047,q:1},{p:.00049,q:4},{p:.0005,q:6},{p:.00055,q:2},{p:.00059,q:2},{p:.00065,q:1},{p:.00007,q:67},{p:.00077,q:3},{p:.00089,q:1},{p:.00009,q:303},{p:.00008,q:737},{p:.00007,q:165},{p:.00125,q:1},{p:.00006,q:298},{p:.0011,q:7},{p:.00004,q:342},{p:.0015,q:1}];
+const RAW=[{p:.00013,q:60},{p:.00001,q:93},{p:.00014,q:79},{p:.0001,q:60},{p:.00015,q:100},{p:.00012,q:88},{p:.000159,q:2},{p:.00016,q:73},{p:.000162,q:2},{p:.000165,q:39},{p:.000169,q:53},{p:.00017,q:116},{p:.000185,q:35},{p:.00019,q:88},{p:.0002,q:123},{p:.000219,q:60},{p:.00023,q:56},{p:.000235,q:35},{p:.00024,q:165},{p:.00025,q:91},{p:.00026,q:21},{p:.000269,q:7},{p:.00027,q:32},{p:.00028,q:92},{p:.00029,q:35},{p:.0003,q:126},{p:.00031,q:82},{p:.00032,q:67},{p:.00033,q:39},{p:.00034,q:42},{p:.00035,q:33},{p:.00036,q:41},{p:.00037,q:93},{p:.00038,q:24},{p:.00039,q:4},{p:.0004,q:35},{p:.00041,q:9},{p:.00042,q:11},{p:.00043,q:1},{p:.00044,q:6},{p:.00045,q:10},{p:.00047,q:1},{p:.00049,q:4},{p:.0005,q:6},{p:.00055,q:2},{p:.00059,q:2},{p:.00065,q:1},{p:.00007,q:67},{p:.00077,q:3},{p:.00089,q:1},{p:.00009,q:338},{p:.00008,q:737},{p:.00007,q:165},{p:.00125,q:1},{p:.00006,q:298},{p:.0011,q:7},{p:.00004,q:342},{p:.0015,q:1}];
 
 const FLOOR=.0001,TOTAL=RAW.reduce((s,r)=>s+r.q,0),TOTAL_SPENT=RAW.reduce((s,r)=>s+r.p*r.q,0),AVG_COST=TOTAL_SPENT/TOTAL,sorted=[...RAW].sort((a,b)=>a.p-b.p);
 const BCOL=['#f7931a','#e8850f','#d97706','#b45309','#92400e','#78350f'];
