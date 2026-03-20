@@ -26,8 +26,8 @@
       --surface: rgba(247,147,26,0.03);
       --border: rgba(247,147,26,0.08);
       --text: #d4d4d4;
-      --text-dim: #5a5a5a;
-      --text-muted: #3a3a3a;
+      --text-dim: #949494;
+      --text-muted: #727272;
       --green: #22c55e;
       --red: #ef4444;
       --blue: #3b82f6;
@@ -65,7 +65,7 @@
     .hero-sub strong { color: var(--orange); font-weight: 600; }
 
     .wallet { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 20px; animation: fadeUp 0.8s ease 0.1s both; }
-    .wallet-addr { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #6b6b6b; background: rgba(247,147,26,0.05); border: 1px solid rgba(247,147,26,0.1); border-radius: 8px; padding: 8px 14px; max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; transition: all 0.25s ease; }
+    .wallet-addr { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: #a0a0a0; background: rgba(247,147,26,0.05); border: 1px solid rgba(247,147,26,0.1); border-radius: 8px; padding: 8px 14px; max-width: 380px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; cursor: pointer; transition: all 0.25s ease; }
     .wallet-addr:hover { color: var(--orange); border-color: rgba(247,147,26,0.25); }
     .wallet-copy { background: rgba(247,147,26,0.08); border: 1px solid rgba(247,147,26,0.15); border-radius: 8px; padding: 8px 10px; cursor: pointer; color: var(--text-dim); transition: all 0.25s ease; display: flex; align-items: center; }
     .wallet-copy:hover { color: var(--orange); border-color: rgba(247,147,26,0.3); }
@@ -94,7 +94,7 @@
     .stat-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); margin-top: 4px; }
 
     .panel { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 24px; margin-bottom: 16px; }
-    .panel-title { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #7a7a7a; margin-bottom: 4px; }
+    .panel-title { font-family: 'JetBrains Mono', monospace; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: #a0a0a0; margin-bottom: 4px; }
     .panel-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-muted); margin-bottom: 20px; }
 
     .position-row { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 16px; }
@@ -108,10 +108,10 @@
     .chart-wrap { position: relative; height: 280px; margin-top: 8px; }
     .chart-wrap canvas { width: 100% !important; height: 100% !important; }
 
-    .tabs { display: flex; gap: 2px; background: rgba(247,147,26,0.04); border-radius: 10px; padding: 3px; width: fit-content; margin-bottom: 24px; animation: fadeUp 0.8s ease 0.25s both; flex-wrap: wrap; }
-    .tab-btn { background: transparent; border: 1px solid transparent; color: var(--text-dim); padding: 8px 18px; border-radius: 8px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.2s ease; }
-    .tab-btn.active { background: rgba(247,147,26,0.15); border-color: rgba(247,147,26,0.25); color: var(--orange); }
-    .tab-btn:hover:not(.active) { color: #8a8a8a; }
+    .tabs { display: flex; gap: 6px; background: rgba(247,147,26,0.05); border: 1px solid rgba(247,147,26,0.12); border-radius: 14px; padding: 6px; margin-bottom: 28px; animation: fadeUp 0.8s ease 0.25s both; flex-wrap: wrap; width: 100%; justify-content: center; }
+    .tab-btn { background: transparent; border: 1px solid transparent; color: var(--text-dim); padding: 10px 20px; border-radius: 10px; cursor: pointer; font-family: 'JetBrains Mono', monospace; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; transition: all 0.25s ease; position: relative; }
+    .tab-btn.active { background: rgba(247,147,26,0.18); border-color: rgba(247,147,26,0.3); color: var(--orange); box-shadow: 0 0 12px rgba(247,147,26,0.08); }
+    .tab-btn:hover:not(.active) { color: #c0c0c0; background: rgba(247,147,26,0.06); border-color: rgba(247,147,26,0.1); }
     .tab-panel { display: none; animation: fadeUp 0.4s ease; }
     .tab-panel.active { display: block; }
 
@@ -171,8 +171,28 @@
     .dca-card { padding: 18px 20px; background: rgba(0,0,0,0.3); border-radius: 12px; border-top: 3px solid; }
     .dca-card .dc-title { font-family: 'JetBrains Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-dim); margin-bottom: 12px; }
     .dca-card .dc-row { display: flex; justify-content: space-between; padding: 4px 0; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
-    .dca-card .dc-label { color: #6b6b6b; }
+    .dca-card .dc-label { color: #a0a0a0; }
     .dca-card .dc-val { color: #e0e0e0; font-weight: 600; }
+
+    /* Rank badge */
+    .rank-banner { display: flex; align-items: center; gap: 16px; padding: 18px 22px; background: linear-gradient(135deg, rgba(247,147,26,0.1) 0%, rgba(247,147,26,0.02) 100%); border: 1px solid rgba(247,147,26,0.2); border-radius: 14px; margin-bottom: 16px; }
+    .rank-num { font-family: 'JetBrains Mono', monospace; font-size: 36px; font-weight: 700; color: var(--orange); line-height: 1; text-shadow: 0 0 20px rgba(247,147,26,0.2); min-width: 56px; text-align: center; }
+    .rank-info { flex: 1; }
+    .rank-info .ri-title { font-family: 'JetBrains Mono', monospace; font-size: 13px; font-weight: 600; color: #e0e0e0; margin-bottom: 2px; }
+    .rank-info .ri-sub { font-family: 'JetBrains Mono', monospace; font-size: 11px; color: var(--text-dim); }
+    .rank-bar-wrap { margin-top: 10px; }
+    .rank-bar-track { height: 6px; border-radius: 3px; background: rgba(0,0,0,0.3); overflow: hidden; position: relative; }
+    .rank-bar-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--orange), #fbbf24); transition: width 0.8s ease; }
+    .rank-bar-labels { display: flex; justify-content: space-between; margin-top: 4px; font-family: 'JetBrains Mono', monospace; font-size: 9px; color: var(--text-muted); }
+
+    /* Leaderboard table */
+    .lb-table { width: 100%; border-collapse: collapse; font-family: 'JetBrains Mono', monospace; font-size: 12px; }
+    .lb-table th { text-align: left; padding: 8px 12px; color: var(--text-dim); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; border-bottom: 1px solid var(--border); font-weight: 500; }
+    .lb-table td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,0.02); }
+    .lb-table tr.highlight { background: rgba(247,147,26,0.06); }
+    .lb-table tr.highlight td { border-bottom-color: rgba(247,147,26,0.1); }
+    .lb-rank { font-weight: 700; min-width: 28px; }
+    .lb-you { display: inline-block; padding: 2px 6px; background: rgba(247,147,26,0.2); border-radius: 4px; color: var(--orange); font-size: 9px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin-left: 6px; }
 
     .footer { margin-top: 40px; padding: 20px 0; border-top: 1px solid rgba(247,147,26,0.06); display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; }
     .footer span { font-family: 'JetBrains Mono', monospace; font-size: 10px; color: var(--text-muted); }
@@ -190,7 +210,7 @@
       .stat-value { font-size: 18px; }
       .wallet-addr { max-width: 260px; font-size: 10px; }
       .dca-compare { grid-template-columns: 1fr; }
-      .tab-btn { padding: 6px 12px; font-size: 10px; }
+      .tab-btn { padding: 8px 14px; font-size: 10px; }
     }
   </style>
 </head>
@@ -238,6 +258,7 @@
 
     <div class="tabs">
       <button class="tab-btn active" data-tab="overview">Overview</button>
+      <button class="tab-btn" data-tab="leaderboard">Leaderboard</button>
       <button class="tab-btn" data-tab="distribution">Distribution</button>
       <button class="tab-btn" data-tab="accumulation">Accumulation</button>
       <button class="tab-btn" data-tab="analytics">Analytics</button>
@@ -246,6 +267,17 @@
 
     <!-- OVERVIEW -->
     <div id="tab-overview" class="tab-panel active">
+      <div class="rank-banner">
+        <div class="rank-num">#8</div>
+        <div class="rank-info">
+          <div class="ri-title">8th Largest Bitmap Holder</div>
+          <div class="ri-sub">4,228 parcels · 0.45% of total supply · #7 among individual holders</div>
+          <div class="rank-bar-wrap">
+            <div class="rank-bar-track"><div class="rank-bar-fill" style="width:2.3%"></div></div>
+            <div class="rank-bar-labels"><span>Treasury: 4,228</span><span>#1: 183,066</span></div>
+          </div>
+        </div>
+      </div>
       <div class="panel">
         <div class="panel-title">Position Breakdown vs Floor</div>
         <div class="panel-sub">How 4,225 parcels compare to the 10,000 sat floor</div>
@@ -314,9 +346,36 @@
         <div class="chart-wrap" style="height:260px;margin-top:16px"><canvas id="chart-exit"></canvas></div>
       </div>
       <div class="panel">
-        <div class="panel-title">DCA Analysis</div><div class="panel-sub">Your dollar-cost-average strategy vs alternative approaches</div>
+        <div class="panel-title">DCA Analysis</div><div class="panel-sub">Treasury DCA strategy vs alternative approaches</div>
         <div class="dca-compare" id="dca-compare"></div>
         <div class="chart-wrap" style="height:280px;margin-top:20px"><canvas id="chart-dca"></canvas></div>
+      </div>
+    </div>
+
+    <!-- LEADERBOARD -->
+    <div id="tab-leaderboard" class="tab-panel">
+      <div class="panel">
+        <div class="panel-title">Top 18 Bitmap Holders</div>
+        <div class="panel-sub">Leaderboard from Satflow — Bitmap Treasury is #8 globally</div>
+        <div class="chart-wrap" style="height:340px"><canvas id="chart-holders"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Holder Leaderboard</div>
+        <div class="panel-sub">Wallet addresses ranked by parcel count</div>
+        <div class="table-wrap">
+          <table class="lb-table" id="lb-table"><thead><tr><th>Rank</th><th>Wallet</th><th>Parcels</th><th>% Supply</th><th>Est. Value</th></tr></thead><tbody></tbody></table>
+        </div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Dominance Analytics</div>
+        <div class="panel-sub">Concentration and competitive position metrics</div>
+        <div class="position-row" id="holder-stats"></div>
+        <div class="chart-wrap" style="height:280px;margin-top:16px"><canvas id="chart-dominance"></canvas></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Gap Analysis</div>
+        <div class="panel-sub">Distance to adjacent ranks — what it takes to move up or defend</div>
+        <div class="position-row" id="gap-stats"></div>
       </div>
     </div>
 
@@ -363,7 +422,7 @@ new Chart(document.getElementById('chart-spend'),{type:'bar',data:{labels:BUCKET
 
 // Cumulative
 let cQ=0,cS=0;const cumD=sorted.map(r=>{cQ+=r.q;cS+=r.p*r.q;return{label:(r.p*1e8).toFixed(0),cumQ:cQ,cumS:+cS.toFixed(6)}});
-function mkArea(id,data,key,col){const ctx=document.getElementById(id).getContext('2d');const g=ctx.createLinearGradient(0,0,0,280);g.addColorStop(0,col.replace('1)','.35)'));g.addColorStop(1,col.replace('1)','.02)'));new Chart(ctx,{type:'line',data:{labels:data.map(d=>d.label),datasets:[{data:data.map(d=>d[key]),borderColor:col,borderWidth:2,backgroundColor:g,fill:true,pointRadius:0,tension:.3}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false},border:{color:'#1a1a1a'},title:{display:true,text:'Entry Price (sats)',color:'#4a4a4a'},ticks:{maxTicksLimit:12}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false}}},plugins:{tooltip:TT}}})}
+function mkArea(id,data,key,col){const ctx=document.getElementById(id).getContext('2d');const g=ctx.createLinearGradient(0,0,0,280);g.addColorStop(0,col.replace('1)','.35)'));g.addColorStop(1,col.replace('1)','.02)'));new Chart(ctx,{type:'line',data:{labels:data.map(d=>d.label),datasets:[{data:data.map(d=>d[key]),borderColor:col,borderWidth:2,backgroundColor:g,fill:true,pointRadius:0,tension:.3}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false},border:{color:'#1a1a1a'},title:{display:true,text:'Entry Price (sats)',color:'#848484'},ticks:{maxTicksLimit:12}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false}}},plugins:{tooltip:TT}}})}
 mkArea('chart-cum-qty',cumD,'cumQ','rgba(247,147,26,1)');mkArea('chart-cum-btc',cumD,'cumS','rgba(251,191,36,1)');
 
 // ===== ANALYTICS =====
@@ -382,13 +441,13 @@ sl.addEventListener('input',updSlider);updSlider();
 const bySpd=[...RAW].sort((a,b)=>(b.p*b.q)-(a.p*a.q));let cp=0;
 const pData=bySpd.map(r=>{cp+=(r.p*r.q)/TOTAL_SPENT*100;return{label:(r.p*1e8).toFixed(0)+'s',cumPct:+cp.toFixed(1),spend:+(r.p*r.q*1e4).toFixed(2)}});
 const pCtx=document.getElementById('chart-pareto').getContext('2d');
-new Chart(pCtx,{type:'bar',data:{labels:pData.map(d=>d.label),datasets:[{type:'line',data:pData.map(d=>d.cumPct),borderColor:'#ef4444',borderWidth:2,pointRadius:0,tension:.3,yAxisID:'y1',order:0},{data:pData.map(d=>d.spend),backgroundColor:'rgba(247,147,26,0.5)',borderRadius:2,borderSkipped:false,yAxisID:'y',order:1}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false},border:{color:'#1a1a1a'},ticks:{maxTicksLimit:15}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false},title:{display:true,text:'Spend (×10⁻⁴ BTC)',color:'#4a4a4a'}},y1:{position:'right',grid:{display:false},border:{display:false},min:0,max:100,ticks:{callback:v=>v+'%'},title:{display:true,text:'Cumulative %',color:'#4a4a4a'}}},plugins:{tooltip:TT}}});
+new Chart(pCtx,{type:'bar',data:{labels:pData.map(d=>d.label),datasets:[{type:'line',data:pData.map(d=>d.cumPct),borderColor:'#ef4444',borderWidth:2,pointRadius:0,tension:.3,yAxisID:'y1',order:0},{data:pData.map(d=>d.spend),backgroundColor:'rgba(247,147,26,0.5)',borderRadius:2,borderSkipped:false,yAxisID:'y',order:1}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false},border:{color:'#1a1a1a'},ticks:{maxTicksLimit:15}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false},title:{display:true,text:'Spend (×10⁻⁴ BTC)',color:'#848484'}},y1:{position:'right',grid:{display:false},border:{display:false},min:0,max:100,ticks:{callback:v=>v+'%'},title:{display:true,text:'Cumulative %',color:'#848484'}}},plugins:{tooltip:TT}}});
 
 const t10s=bySpd.slice(0,10).reduce((s,r)=>s+r.p*r.q,0),t10p=(t10s/TOTAL_SPENT*100).toFixed(1),t10q=bySpd.slice(0,10).reduce((s,r)=>s+r.q,0);
 document.getElementById('pareto-stats').innerHTML=`<div class="position-card" style="border-color:var(--orange)"><div class="label">Top 10 Tranches</div><div class="val" style="color:var(--orange)">${t10p}%</div><div class="desc">of total BTC spent (${t10s.toFixed(4)} BTC)</div></div><div class="position-card" style="border-color:var(--blue)"><div class="label">Top 10 Parcels</div><div class="val" style="color:var(--blue)">${t10q.toLocaleString()}</div><div class="desc">${((t10q/TOTAL)*100).toFixed(1)}% of total holdings</div></div><div class="position-card" style="border-color:var(--purple)"><div class="label">Largest Tranche</div><div class="val" style="color:var(--purple)">${(bySpd[0].p*bySpd[0].q).toFixed(4)}</div><div class="desc">BTC — ${bySpd[0].q} @ ${(bySpd[0].p*1e8).toFixed(0)} sats</div></div>`;
 
 // Scatter
-new Chart(document.getElementById('chart-scatter'),{type:'scatter',data:{datasets:[{data:RAW.map(r=>({x:r.p*1e8,y:r.q,spend:(r.p*r.q).toFixed(6)})),backgroundColor:RAW.map(r=>r.p<FLOOR?'rgba(34,197,94,0.7)':r.p<=FLOOR*1.01?'rgba(247,147,26,0.7)':'rgba(239,68,68,0.5)'),pointRadius:RAW.map(r=>Math.max(4,Math.sqrt(r.q)*1.2)),pointHoverRadius:RAW.map(r=>Math.max(6,Math.sqrt(r.q)*1.5))}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{color:'rgba(255,255,255,0.03)'},border:{color:'#1a1a1a'},title:{display:true,text:'Price (sats)',color:'#4a4a4a'}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false},title:{display:true,text:'Quantity',color:'#4a4a4a'}}},plugins:{tooltip:{...TT,callbacks:{label:c=>{const d=c.raw;return[`Price: ${d.x.toLocaleString()} sats`,`Qty: ${d.y}`,`Spent: ${d.spend} BTC`]}}}}}});
+new Chart(document.getElementById('chart-scatter'),{type:'scatter',data:{datasets:[{data:RAW.map(r=>({x:r.p*1e8,y:r.q,spend:(r.p*r.q).toFixed(6)})),backgroundColor:RAW.map(r=>r.p<FLOOR?'rgba(34,197,94,0.7)':r.p<=FLOOR*1.01?'rgba(247,147,26,0.7)':'rgba(239,68,68,0.5)'),pointRadius:RAW.map(r=>Math.max(4,Math.sqrt(r.q)*1.2)),pointHoverRadius:RAW.map(r=>Math.max(6,Math.sqrt(r.q)*1.5))}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{color:'rgba(255,255,255,0.03)'},border:{color:'#1a1a1a'},title:{display:true,text:'Price (sats)',color:'#848484'}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false},title:{display:true,text:'Quantity',color:'#848484'}}},plugins:{tooltip:{...TT,callbacks:{label:c=>{const d=c.raw;return[`Price: ${d.x.toLocaleString()} sats`,`Qty: ${d.y}`,`Spent: ${d.spend} BTC`]}}}}}});
 
 // Heatmap
 const hm=document.getElementById('heatmap');
@@ -402,18 +461,76 @@ function runSim(){
   const rc=document.getElementById('sim-results'),c=np>=0?'var(--green)':'var(--red)';
   rc.innerHTML=`<div class="sim-result-card"><div class="src-label">Revenue</div><div class="src-val" style="color:var(--green)">+${rev.toFixed(4)} BTC</div></div><div class="sim-result-card"><div class="src-label">Recouped</div><div class="src-val">${rcp.toFixed(1)}%</div></div><div class="sim-result-card"><div class="src-label">Remaining</div><div class="src-val">${rq.toLocaleString()}</div></div><div class="sim-result-card"><div class="src-label">New Avg Cost</div><div class="src-val">${ns>0?ns.toLocaleString()+' sats':'—'}</div></div><div class="sim-result-card"><div class="src-label">New P&L</div><div class="src-val" style="color:${c}">${np>=0?'+':''}${np.toFixed(4)} BTC</div></div><div class="sim-result-card"><div class="src-label">New P&L %</div><div class="src-val" style="color:${c}">${npp>=0?'+':''}${npp.toFixed(1)}%</div></div>`;
   if(exitChart)exitChart.destroy();
-  exitChart=new Chart(document.getElementById('chart-exit'),{type:'bar',data:{labels:['Parcels','Avg Cost (sats)','Invested (BTC×10³)','P&L %'],datasets:[{label:'Before',data:[TOTAL,Math.round(AVG_COST*1e8),+(TOTAL_SPENT*1e3).toFixed(2),+((TOTAL*FLOOR-TOTAL_SPENT)/TOTAL_SPENT*100).toFixed(1)],backgroundColor:'rgba(247,147,26,0.4)',borderRadius:4,borderSkipped:false},{label:'After Exit',data:[rq,ns,+(rs*1e3).toFixed(2),+npp.toFixed(1)],backgroundColor:'rgba(34,197,94,0.4)',borderRadius:4,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#6b6b6b',font:{family:"'JetBrains Mono'",size:10}}},tooltip:TT},scales:{x:{grid:{display:false},border:{color:'#1a1a1a'}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false}}}}});
+  exitChart=new Chart(document.getElementById('chart-exit'),{type:'bar',data:{labels:['Parcels','Avg Cost (sats)','Invested (BTC×10³)','P&L %'],datasets:[{label:'Before',data:[TOTAL,Math.round(AVG_COST*1e8),+(TOTAL_SPENT*1e3).toFixed(2),+((TOTAL*FLOOR-TOTAL_SPENT)/TOTAL_SPENT*100).toFixed(1)],backgroundColor:'rgba(247,147,26,0.4)',borderRadius:4,borderSkipped:false},{label:'After Exit',data:[rq,ns,+(rs*1e3).toFixed(2),+npp.toFixed(1)],backgroundColor:'rgba(34,197,94,0.4)',borderRadius:4,borderSkipped:false}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#a0a0a0',font:{family:"'JetBrains Mono'",size:10}}},tooltip:TT},scales:{x:{grid:{display:false},border:{color:'#1a1a1a'}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false}}}}});
 }
 runSim();
 
 // DCA
 const prices=sorted.map(r=>r.p),medP=prices[Math.floor(prices.length/2)],minP=prices[0],maxP=prices[prices.length-1];
 const lsT=Math.floor(TOTAL_SPENT/medP),bcT=Math.floor(TOTAL_SPENT/minP);
-document.getElementById('dca-compare').innerHTML=`<div class="dca-card" style="border-color:var(--orange)"><div class="dc-title">Your DCA Strategy</div><div class="dc-row"><span class="dc-label">Avg Cost</span><span class="dc-val">${(AVG_COST*1e8).toFixed(0)} sats</span></div><div class="dc-row"><span class="dc-label">Total Parcels</span><span class="dc-val">${TOTAL.toLocaleString()}</span></div><div class="dc-row"><span class="dc-label">Total Spent</span><span class="dc-val">${TOTAL_SPENT.toFixed(4)} BTC</span></div><div class="dc-row"><span class="dc-label">Tranches</span><span class="dc-val">${RAW.length}</span></div><div class="dc-row"><span class="dc-label">Price Range</span><span class="dc-val">${(minP*1e8).toFixed(0)}–${(maxP*1e8).toFixed(0)}</span></div><div class="dc-row"><span class="dc-label">Spread</span><span class="dc-val">${((maxP-minP)/minP*100).toFixed(0)}%</span></div></div><div class="dca-card" style="border-color:var(--blue)"><div class="dc-title">Lump Sum at Median</div><div class="dc-row"><span class="dc-label">Median Price</span><span class="dc-val">${(medP*1e8).toFixed(0)} sats</span></div><div class="dc-row"><span class="dc-label">Parcels</span><span class="dc-val">${lsT.toLocaleString()}</span></div><div class="dc-row"><span class="dc-label">Same Spend</span><span class="dc-val">${TOTAL_SPENT.toFixed(4)} BTC</span></div><div class="dc-row"><span class="dc-label">DCA Advantage</span><span class="dc-val" style="color:${TOTAL>lsT?'var(--green)':'var(--red)'}">${TOTAL>lsT?'+':''}${(TOTAL-lsT).toLocaleString()} parcels</span></div><div class="dc-row"><span class="dc-label">Cost Savings</span><span class="dc-val" style="color:${AVG_COST<medP?'var(--green)':'var(--red)'}">${AVG_COST<medP?'-':'+'}${Math.abs(((AVG_COST-medP)/medP)*100).toFixed(1)}%</span></div><div class="dc-row"><span class="dc-label">Best Case</span><span class="dc-val">${bcT.toLocaleString()} parcels</span></div></div>`;
+document.getElementById('dca-compare').innerHTML=`<div class="dca-card" style="border-color:var(--orange)"><div class="dc-title">Treasury DCA Strategy</div><div class="dc-row"><span class="dc-label">Avg Cost</span><span class="dc-val">${(AVG_COST*1e8).toFixed(0)} sats</span></div><div class="dc-row"><span class="dc-label">Total Parcels</span><span class="dc-val">${TOTAL.toLocaleString()}</span></div><div class="dc-row"><span class="dc-label">Total Spent</span><span class="dc-val">${TOTAL_SPENT.toFixed(4)} BTC</span></div><div class="dc-row"><span class="dc-label">Tranches</span><span class="dc-val">${RAW.length}</span></div><div class="dc-row"><span class="dc-label">Price Range</span><span class="dc-val">${(minP*1e8).toFixed(0)}–${(maxP*1e8).toFixed(0)}</span></div><div class="dc-row"><span class="dc-label">Spread</span><span class="dc-val">${((maxP-minP)/minP*100).toFixed(0)}%</span></div></div><div class="dca-card" style="border-color:var(--blue)"><div class="dc-title">Lump Sum at Median</div><div class="dc-row"><span class="dc-label">Median Price</span><span class="dc-val">${(medP*1e8).toFixed(0)} sats</span></div><div class="dc-row"><span class="dc-label">Parcels</span><span class="dc-val">${lsT.toLocaleString()}</span></div><div class="dc-row"><span class="dc-label">Same Spend</span><span class="dc-val">${TOTAL_SPENT.toFixed(4)} BTC</span></div><div class="dc-row"><span class="dc-label">DCA Advantage</span><span class="dc-val" style="color:${TOTAL>lsT?'var(--green)':'var(--red)'}">${TOTAL>lsT?'+':''}${(TOTAL-lsT).toLocaleString()} parcels</span></div><div class="dc-row"><span class="dc-label">Cost Savings</span><span class="dc-val" style="color:${AVG_COST<medP?'var(--green)':'var(--red)'}">${AVG_COST<medP?'-':'+'}${Math.abs(((AVG_COST-medP)/medP)*100).toFixed(1)}%</span></div><div class="dc-row"><span class="dc-label">Best Case</span><span class="dc-val">${bcT.toLocaleString()} parcels</span></div></div>`;
 
 // DCA chart
 let rQ=0,rS=0;const dcaD=sorted.map(r=>{rQ+=r.q;rS+=r.p*r.q;return{label:(r.p*1e8).toFixed(0),avg:+((rS/rQ)*1e8).toFixed(0),price:+(r.p*1e8).toFixed(0)}});
-new Chart(document.getElementById('chart-dca'),{type:'line',data:{labels:dcaD.map(d=>d.label),datasets:[{label:'Running Avg Cost',data:dcaD.map(d=>d.avg),borderColor:'#f7931a',borderWidth:2,pointRadius:0,tension:.3},{label:'Entry Price',data:dcaD.map(d=>d.price),borderColor:'rgba(59,130,246,0.5)',borderWidth:1,pointRadius:2,pointBackgroundColor:'rgba(59,130,246,0.7)',tension:0},{label:'Floor',data:dcaD.map(()=>FLOOR*1e8),borderColor:'rgba(239,68,68,0.4)',borderWidth:1,borderDash:[6,4],pointRadius:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#6b6b6b',font:{family:"'JetBrains Mono'",size:10},usePointStyle:true}},tooltip:TT},scales:{x:{grid:{display:false},border:{color:'#1a1a1a'},title:{display:true,text:'Entry Price (sats)',color:'#4a4a4a'},ticks:{maxTicksLimit:12}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false},title:{display:true,text:'Sats',color:'#4a4a4a'}}}}});
+new Chart(document.getElementById('chart-dca'),{type:'line',data:{labels:dcaD.map(d=>d.label),datasets:[{label:'Running Avg Cost',data:dcaD.map(d=>d.avg),borderColor:'#f7931a',borderWidth:2,pointRadius:0,tension:.3},{label:'Entry Price',data:dcaD.map(d=>d.price),borderColor:'rgba(59,130,246,0.5)',borderWidth:1,pointRadius:2,pointBackgroundColor:'rgba(59,130,246,0.7)',tension:0},{label:'Floor',data:dcaD.map(()=>FLOOR*1e8),borderColor:'rgba(239,68,68,0.4)',borderWidth:1,borderDash:[6,4],pointRadius:0}]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:true,labels:{color:'#a0a0a0',font:{family:"'JetBrains Mono'",size:10},usePointStyle:true}},tooltip:TT},scales:{x:{grid:{display:false},border:{color:'#1a1a1a'},title:{display:true,text:'Entry Price (sats)',color:'#848484'},ticks:{maxTicksLimit:12}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false},title:{display:true,text:'Sats',color:'#848484'}}}}});
+
+// ===== LEADERBOARD =====
+const HOLDERS=[
+  {w:'Merlin Chain (Staking)',n:183066,pct:19.45,val:13.72995,usd:966149.12,staking:true},
+  {w:'bc1qsr...y6ez',n:7075,pct:0.75,val:0.530625,usd:37425},
+  {w:'bc1pz5...qwdg',n:6884,pct:0.73,val:0.5163,usd:36418.77},
+  {w:'bc1q28...5uh6',n:5753,pct:0.61,val:0.431475,usd:30435.38},
+  {w:'bc1ps2...vfwy',n:5669,pct:0.60,val:0.425175,usd:29990.99},
+  {w:'bc1pvj...89xh',n:5618,pct:0.60,val:0.42135,usd:29721.19},
+  {w:'bc1qr3...yvuk',n:5108,pct:0.54,val:0.3831,usd:27023.11},
+  {w:'bc1pyf...sa9e',n:4228,pct:0.45,val:0.3171,usd:22367.60,you:true},
+  {w:'bc1qgc...k9xp',n:4170,pct:0.44,val:0.31275,usd:22060},
+  {w:'bc1pja...jt9n',n:3778,pct:0.40,val:0.28335,usd:19994.59},
+  {w:'bc1pdr...tnwe',n:3581,pct:0.38,val:0.268575,usd:18951.99},
+  {w:'bc1p5s...t93u',n:3187,pct:0.34,val:0.239025,usd:16866.80},
+  {w:'bc1pm3...vd37',n:3112,pct:0.33,val:0.2334,usd:16469.87},
+  {w:'bc1pjv...0tf8',n:3096,pct:0.33,val:0.2322,usd:16385.19},
+  {w:'bc1pgk...hgmv',n:3064,pct:0.33,val:0.2298,usd:16215.84},
+  {w:'bc1ppy...5zka',n:3029,pct:0.32,val:0.227175,usd:16030.60},
+  {w:'bc1pta...kflg',n:3013,pct:0.32,val:0.225975,usd:15945.93},
+  {w:'bc1ph4...52xr',n:2902,pct:0.31,val:0.21765,usd:15355}
+];
+
+const ME=HOLDERS.find(h=>h.you);
+const topTotal=HOLDERS.reduce((s,h)=>s+h.n,0);
+
+// Holders bar chart
+const YCAP=10000;
+const holdersData=HOLDERS.map(h=>Math.min(h.n,YCAP));
+const holdersChart=new Chart(document.getElementById('chart-holders'),{type:'bar',data:{labels:HOLDERS.map((h,i)=>h.you?'TREASURY (#'+(i+1)+')':h.staking?'Merlin':'#'+(i+1)),datasets:[{data:holdersData,backgroundColor:HOLDERS.map(h=>h.you?'rgba(247,147,26,0.8)':h.staking?'rgba(247,147,26,0.12)':'rgba(247,147,26,0.25)'),borderColor:HOLDERS.map(h=>h.you?'#f7931a':h.staking?'rgba(247,147,26,0.3)':'rgba(247,147,26,0.4)'),borderWidth:HOLDERS.map(h=>h.you?2:0),borderRadius:4,borderSkipped:false,borderDash:HOLDERS.map(h=>h.staking?[4,2]:[])}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false},border:{color:'#1a1a1a'},ticks:{color:HOLDERS.map(h=>h.you?'#f7931a':'#5a5a5a'),font:{size:9}}},y:{max:YCAP,grid:{color:'rgba(255,255,255,0.03)'},border:{display:false},ticks:{callback:v=>v>=YCAP?v.toLocaleString()+'+':v.toLocaleString()}}},plugins:{tooltip:{...TT,callbacks:{label:ctx=>{const h=HOLDERS[ctx.dataIndex];return[`${h.staking?'Merlin Chain (Staking)':h.w}`,`${h.n.toLocaleString()} parcels (${h.pct}%)`,h.staking?'⚠ Bar truncated — actual: 183,066':'']}}},annotation:{}}}});
+
+// Add truncation label above Merlin bar
+const origDraw=holdersChart.draw;
+holdersChart.draw=function(){origDraw.apply(this,arguments);const meta=this.getDatasetMeta(0);const bar=meta.data[0];if(bar){const ctx=this.ctx;ctx.save();ctx.fillStyle='rgba(247,147,26,0.7)';ctx.font="bold 9px 'JetBrains Mono',monospace";ctx.textAlign='center';ctx.fillText('183,066 ↑',bar.x,bar.y-8);ctx.fillStyle='rgba(247,147,26,0.35)';ctx.fillText('(truncated)',bar.x,bar.y-20);ctx.restore()}};
+
+// Leaderboard table
+const lbody=document.querySelector('#lb-table tbody');
+HOLDERS.forEach((h,i)=>{lbody.innerHTML+=`<tr class="${h.you?'highlight':''}"><td class="lb-rank" style="color:${h.you?'var(--orange)':'#a0a0a0'}">#${i+1}</td><td style="color:${h.you?'#f0f0f0':'#a0a0a0'}">${h.w}${h.you?'<span class="lb-you">Treasury</span>':''}</td><td style="color:#e0e0e0;font-weight:600">${h.n.toLocaleString()}</td><td style="color:#a0a0a0">${h.pct}%</td><td style="color:#a0a0a0">${h.val.toFixed(4)} BTC</td></tr>`});
+
+// Holder stats
+document.getElementById('holder-stats').innerHTML=`
+  <div class="position-card" style="border-color:var(--orange)"><div class="label">Treasury Rank</div><div class="val" style="color:var(--orange)">#8</div><div class="desc">of 940,000+ block holders</div></div>
+  <div class="position-card" style="border-color:var(--blue)"><div class="label">Top 18 Hold</div><div class="val" style="color:var(--blue)">${topTotal.toLocaleString()}</div><div class="desc">${(topTotal/940000*100).toFixed(2)}% of all blocks</div></div>
+  <div class="position-card" style="border-color:var(--purple)"><div class="label">Treasury Share of Top 18</div><div class="val" style="color:var(--purple)">${(ME.n/topTotal*100).toFixed(1)}%</div><div class="desc">${ME.n.toLocaleString()} of ${topTotal.toLocaleString()} parcels</div></div>`;
+
+// Dominance pie
+new Chart(document.getElementById('chart-dominance'),{type:'doughnut',data:{labels:HOLDERS.map((h,i)=>h.you?'Bitmap Treasury (#6)':'#'+(i+1)+' '+h.w),datasets:[{data:HOLDERS.map(h=>h.n),backgroundColor:HOLDERS.map((h,i)=>h.you?'#f7931a':`rgba(247,147,26,${0.5-i*0.03})`),borderWidth:0,spacing:2}]},options:{responsive:true,maintainAspectRatio:false,cutout:'50%',plugins:{legend:{display:false},tooltip:{...TT,callbacks:{label:ctx=>{const h=HOLDERS[ctx.dataIndex];return`${h.n.toLocaleString()} parcels (${h.pct}%)`}}}}}});
+
+// Gap analysis
+const above7=HOLDERS[6].n-ME.n;
+const below9=ME.n-HOLDERS[8].n;
+const toTop3=HOLDERS[2].n-ME.n;
+const toNum1=HOLDERS[0].n-ME.n;
+document.getElementById('gap-stats').innerHTML=`
+  <div class="position-card" style="border-color:var(--green)"><div class="label">Lead over #9</div><div class="val" style="color:var(--green)">+${below9.toLocaleString()}</div><div class="desc">parcels ahead of bc1qgc...k9xp</div></div>
+  <div class="position-card" style="border-color:var(--red)"><div class="label">Gap to #7</div><div class="val" style="color:var(--red)">${above7.toLocaleString()}</div><div class="desc">parcels behind bc1qr3...yvuk</div></div>
+  <div class="position-card" style="border-color:var(--orange)"><div class="label">Gap to Top 3</div><div class="val" style="color:var(--orange)">${toTop3.toLocaleString()}</div><div class="desc">parcels to reach #3</div></div>
+  <div class="position-card" style="border-color:var(--purple)"><div class="label">Gap to #1</div><div class="val" style="color:var(--purple)">${toNum1.toLocaleString()}</div><div class="desc">parcels to reach #1</div></div>`;
 
 // Table
 const tbody=document.querySelector('#tranches-table tbody');
