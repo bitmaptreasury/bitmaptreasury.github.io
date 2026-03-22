@@ -142,7 +142,10 @@
     .slider-row { display:flex; align-items:center; gap:12px; }
     .slider-row input[type=range] { flex:1; accent-color:var(--orange); }
     .slider-val { font-family:'JetBrains Mono',monospace; font-size:13px; font-weight:700; color:var(--orange); min-width:90px; text-align:right; }
-    .slider-result { margin-top:12px; font-family:'JetBrains Mono',monospace; font-size:13px; color:#d0d0d0; line-height:1.7; }
+    .slider-result { display:flex; gap:12px; flex-wrap:wrap; margin-top:12px; }
+    .sr-item { flex:1 1 140px; padding:10px 14px; background:rgba(0,0,0,0.2); border-radius:8px; }
+    .sr-label { font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--text-dim); text-transform:uppercase; letter-spacing:0.06em; }
+    .sr-val { font-family:'JetBrains Mono',monospace; font-size:16px; font-weight:700; color:#f0f0f0; margin-top:2px; }
 
     /* HEATMAP */
     .heatmap-grid { display:flex; flex-wrap:wrap; gap:4px; margin-top:8px; }
@@ -194,19 +197,15 @@
     </div>
     <nav class="nav-links">
       <a href="https://twitter.com/bitmaptreasury" target="_blank" class="link-btn">
-        <svg viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53A4.48 4.48 0 0 0 22.43.36a9 9 0 0 1-2.88 1.1A4.52 4.52 0 0 0 16.11 0c-2.5 0-4.52 2.02-4.52 4.52 0 .35.04.7.11 1.03A12.84 12.84 0 0 1 2 1.67a4.53 4.53 0 0 0 1.4 6.04A4.5 4.5 0 0 1 1.4 7v.06c0 2.19 1.56 4.01 3.63 4.43a4.54 4.54 0 0 1-2.04.08 4.53 4.53 0 0 0 4.22 3.14A9.07 9.07 0 0 1 1 17.54a12.8 12.8 0 0 0 6.92 2.03c8.3 0 12.84-6.88 12.84-12.84 0-.2 0-.39-.01-.58A9.17 9.17 0 0 0 23 3z"/></svg>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L2.25 2.25h6.574l4.265 5.638L18.244 2.25zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77z"/></svg>
         <span>@bitmaptreasury</span>
       </a>
-      <a href="https://discord.gg/bitmap" target="_blank" class="link-btn">
+      <a href="https://bitmap.community" target="_blank" class="link-btn">
         <svg viewBox="0 0 24 24"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057c.002.022.015.043.031.057a19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/></svg>
         <span>Bitmap Community</span>
       </a>
-      <a href="https://satrun.gg" target="_blank" class="link-btn">
-        <svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg>
-        <span>SatRun Game</span>
-      </a>
-      <a href="https://unisat.io/marketplace/brc20?tick=bitmap" target="_blank" class="link-btn">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+      <a href="https://bitmap.trade" target="_blank" class="link-btn">
+        <svg viewBox="0 0 24 24" style="fill:#f7931a;stroke:none"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
         <span>Trade Bitmaps</span>
       </a>
     </nav>
@@ -386,6 +385,19 @@
 
   <!-- ═══ ANALYTICS ═══ -->
   <div id="tab-analytics" class="tab-panel">
+    <div class="panel">
+      <div class="panel-title">USD Price Sensitivity</div>
+      <div class="panel-sub">Treasury value in USD at different Bitcoin price scenarios — at current 10,000 sat floor</div>
+      <div class="scenario-grid" id="usd-grid"></div>
+      <div class="slider-wrap" style="margin-top:16px">
+        <label>Custom BTC Price Explorer</label>
+        <div class="slider-row">
+          <input type="range" id="btc-slider" min="20000" max="500000" value="85000" step="5000">
+          <div class="slider-val" id="btc-slider-val">$85,000</div>
+        </div>
+        <div class="slider-result" id="btc-slider-result"></div>
+      </div>
+    </div>
     <div class="panel">
       <div class="panel-title">Break-Even &amp; Price Scenarios</div>
       <div class="panel-sub">Portfolio value at different floor prices · break-even at ~15,780 sats</div>
@@ -593,7 +605,40 @@ const c2=document.getElementById('chart-cum-btc').getContext('2d');
 new Chart(c2,{type:'line',data:{labels:cumData.map(d=>d.l),datasets:[{data:cumData.map(d=>d.vB),borderColor:'#e8850f',borderWidth:2,backgroundColor:mkGrad(c2,'rgba(232,133,15,0.2)','rgba(232,133,15,0.01)'),fill:true,pointRadius:0,tension:0.3}]},options:{responsive:true,maintainAspectRatio:false,scales:{x:{grid:{display:false},border:{color:'#1a1a1a'},ticks:{maxTicksLimit:12}},y:{grid:{color:'rgba(255,255,255,0.03)'},border:{display:false},ticks:{callback:v=>v.toFixed(3)+' ₿'}}},plugins:{tooltip:{...TT,callbacks:{title:i=>`${i[0].label} sats`,label:c=>`${c.raw.toFixed(5)} BTC`}}}}});
 
 // ================================================================
-// ANALYTICS
+// ANALYTICS — USD PRICE SENSITIVITY
+// ================================================================
+const PORTFOLIO_BTC = TOTAL * FLOOR;
+const COST_BTC = TOTAL_SPENT;
+
+const btcScenarios = [
+  {l:'$50,000',btc:50000},{l:'$85,000',btc:85000},{l:'$100,000',btc:100000},
+  {l:'$150,000',btc:150000},{l:'$250,000',btc:250000},{l:'$500,000',btc:500000}
+];
+const ug = document.getElementById('usd-grid');
+btcScenarios.forEach(sc=>{
+  const portUsd=PORTFOLIO_BTC*sc.btc, costUsd=COST_BTC*sc.btc, pnlUsd=portUsd-costUsd;
+  const col=pnlUsd>=0?'var(--green)':'var(--red)';
+  ug.innerHTML+=`<div class="scenario-card"><div class="sc-label">BTC @ ${sc.l}</div><div class="sc-value" style="color:var(--orange)">$${Math.round(portUsd).toLocaleString()}</div><div class="sc-sub" style="color:${col}">P&L: ${pnlUsd>=0?'+':''}$${Math.round(pnlUsd).toLocaleString()}</div></div>`;
+});
+
+const bsl=document.getElementById('btc-slider'), bsvEl=document.getElementById('btc-slider-val'), bsrEl=document.getElementById('btc-slider-result');
+function updBtcSlider(){
+  const bp=parseInt(bsl.value);
+  bsvEl.textContent='$'+bp.toLocaleString();
+  const pv=PORTFOLIO_BTC*bp, cv=COST_BTC*bp, pnl=pv-cv;
+  const col=pnl>=0?'var(--green)':'var(--red)';
+  const perParcel=pv/TOTAL;
+  bsrEl.innerHTML=`
+    <div class="sr-item"><div class="sr-label">Portfolio Value</div><div class="sr-val">$${Math.round(pv).toLocaleString()}</div></div>
+    <div class="sr-item"><div class="sr-label">Cost Basis</div><div class="sr-val">$${Math.round(cv).toLocaleString()}</div></div>
+    <div class="sr-item"><div class="sr-label">P&L (USD)</div><div class="sr-val" style="color:${col}">${pnl>=0?'+':''}$${Math.round(pnl).toLocaleString()}</div></div>
+    <div class="sr-item"><div class="sr-label">Per Parcel</div><div class="sr-val">$${perParcel.toFixed(2)}</div></div>`;
+}
+bsl.addEventListener('input',updBtcSlider);
+updBtcSlider();
+
+// ================================================================
+// ANALYTICS — BREAK-EVEN SCENARIOS
 // ================================================================
 const SCENARIOS=[{label:'1× Floor',sats:10000},{label:'2× Floor',sats:20000},{label:'Break-even',sats:Math.round(AVG_COST*1e8)},{label:'3× Floor',sats:30000},{label:'5× Floor',sats:50000},{label:'10× Floor',sats:100000}];
 const sg=document.getElementById('scenario-grid');
@@ -601,7 +646,18 @@ SCENARIOS.forEach(s=>{const val=TOTAL*s.sats/1e8,pnl=(val-TOTAL_SPENT)/TOTAL_SPE
 
 function calcPnl(sats){const val=TOTAL*sats/1e8,pnl=val-TOTAL_SPENT,pct=pnl/TOTAL_SPENT*100;return{val,pnl,pct};}
 const fs=document.getElementById('floor-slider');
-fs.addEventListener('input',()=>{const s=parseInt(fs.value),{val,pnl,pct}=calcPnl(s);document.getElementById('floor-val').textContent=s.toLocaleString()+' sats';document.getElementById('slider-result').innerHTML=`Portfolio value: <strong style="color:var(--orange)">${val.toFixed(4)} ₿</strong> &nbsp;·&nbsp; P&L: <strong style="color:${pnl>=0?'var(--green)':'var(--red)'}">${pnl>=0?'+':''}${pnl.toFixed(4)} ₿ (${pct>=0?'+':''}${pct.toFixed(1)}%)</strong>`;});
+fs.addEventListener('input',()=>{
+  const s=parseInt(fs.value);
+  const {val,pnl,pct}=calcPnl(s);
+  const inProfit=RAW.filter(r=>r.p<=s/1e8).reduce((a,r)=>a+r.q,0);
+  const col=pnl>=0?'var(--green)':'var(--red)';
+  document.getElementById('floor-val').textContent=s.toLocaleString()+' sats';
+  document.getElementById('slider-result').innerHTML=`
+    <div class="sr-item"><div class="sr-label">Portfolio Value</div><div class="sr-val">${val.toFixed(4)} BTC</div></div>
+    <div class="sr-item"><div class="sr-label">P&L</div><div class="sr-val" style="color:${col}">${pnl>=0?'+':''}${pnl.toFixed(4)} BTC</div></div>
+    <div class="sr-item"><div class="sr-label">Return</div><div class="sr-val" style="color:${col}">${pct>=0?'+':''}${pct.toFixed(1)}%</div></div>
+    <div class="sr-item"><div class="sr-label">In Profit</div><div class="sr-val">${inProfit.toLocaleString()} parcels</div></div>`;
+});
 fs.dispatchEvent(new Event('input'));
 
 const bySpend=[...RAW].sort((a,b)=>b.p*b.q-a.p*a.q);let cs=0;
@@ -617,7 +673,16 @@ RAW.forEach(r=>{const pct=((r.p-FLOOR)/FLOOR*100);const bg=r.p<FLOOR?`rgba(34,19
 // SIMULATOR
 // ================================================================
 const xs=document.getElementById('exit-slider');
-xs.addEventListener('input',()=>{const s=parseInt(xs.value),{val,pnl,pct}=calcPnl(s);document.getElementById('exit-val').textContent=s.toLocaleString()+' sats';document.getElementById('exit-result').innerHTML=`Portfolio value: <strong style="color:var(--orange)">${val.toFixed(4)} ₿</strong> &nbsp;·&nbsp; P&L: <strong style="color:${pnl>=0?'var(--green)':'var(--red)'}">${pnl>=0?'+':''}${pnl.toFixed(4)} ₿ (${pct>=0?'+':''}${pct.toFixed(1)}%)</strong>`;});
+xs.addEventListener('input',()=>{
+  const s=parseInt(xs.value);
+  const {val,pnl,pct}=calcPnl(s);
+  const col=pnl>=0?'var(--green)':'var(--red)';
+  document.getElementById('exit-val').textContent=s.toLocaleString()+' sats';
+  document.getElementById('exit-result').innerHTML=`
+    <div class="sr-item"><div class="sr-label">Portfolio Value</div><div class="sr-val">${val.toFixed(4)} BTC</div></div>
+    <div class="sr-item"><div class="sr-label">P&L</div><div class="sr-val" style="color:${col}">${pnl>=0?'+':''}${pnl.toFixed(4)} BTC</div></div>
+    <div class="sr-item"><div class="sr-label">Return</div><div class="sr-val" style="color:${col}">${pct>=0?'+':''}${pct.toFixed(1)}%</div></div>`;
+});
 xs.dispatchEvent(new Event('input'));
 
 const exitSc=[{label:'Bear',sats:5000},{label:'Floor',sats:10000},{label:'Break-even',sats:Math.round(AVG_COST*1e8)},{label:'2×',sats:20000},{label:'5×',sats:50000},{label:'10×',sats:100000}];
