@@ -1,6 +1,6 @@
 # Bitmap Treasury
 
-**[@bitmaptreasury](https://twitter.com/bitmaptreasury)** — 4,225 Bitcoin-native Bitmap parcels across 57 tranches.
+**[@bitmaptreasury](https://twitter.com/bitmaptreasury)** — 4,286 Bitcoin-native Bitmap parcels across 57 tranches.
 
 ## Why Bitmap?
 
